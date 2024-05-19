@@ -1,0 +1,17 @@
+.synthwave {
+    margin-top: 900px;
+    color: #6c1465;
+    text-align: center;
+}
+
+body {
+    background-image: url('wallhaven-6kmrq7_2560x1440.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #12171b; 
+}
+img.pfp {
+    margin-left: 30px;
+    width: 30%;
+    height: 30%;
+}

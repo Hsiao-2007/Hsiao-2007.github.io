@@ -1,26 +1,28 @@
-.synthwave {
-    color: #6c1465;
+.windowed {
+    border: 1px solid white;
+    border-top-width: 25px;
+    border-left-width: 0px;
+    border-right-width: 0px;
     text-align: center;
 }
 @font-face {
     font-family: terminal-font;
     src: url(JetbrainsMonoMedium-nRvBM.ttf);
 }
-p.synthwave {
+p.windowed {
     font-size: 50px;
     font-family: terminal-font;
-    border: 1px solid white;
-    border-top-width: 25px;
     background-color: black;
     text-align: left;
     color: #33FF00;
     margin-top: 200px;
     margin-left: 900px;
     margin-right: 100px;
+    min-width: 1100px;
 }
 
 body {
-    background-image: url('wallhaven-6kmrq7_2560x1440.png');
+    background-image: url('assets/wallpaper.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #12171b; 
@@ -30,9 +32,10 @@ img.window.clearfix{
     overflow: auto;
 }
 
-img.pfp {
+img.windowed {
     float: left;
     margin-left: 30px;
+    margin-top: -25%;
     width: 30%;
     height: 30%;
 }

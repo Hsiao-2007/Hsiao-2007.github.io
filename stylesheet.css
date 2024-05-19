@@ -18,6 +18,7 @@ p.windowed {
     margin-top: 200px;
     margin-left: 900px;
     margin-right: 100px;
+    min-width: 1100px;
 }
 
 body {

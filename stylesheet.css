@@ -1,4 +1,6 @@
 .windowed {
+    z-index: 2;
+    display: flexbox;
     border: 1px solid white;
     border-top-width: 25px;
     border-left-width: 0px;
@@ -23,13 +25,9 @@ p.windowed {
 body {
     background-image: url('assets/wallpaper.png');
     background-size: 100%;
+    background-min-width: 1000px;
     background-repeat: no-repeat;
     background-color: #12171b; 
-}
-
-img.window {
-    margin: 0px 0px 0px 0px;
-
 }
 
 img.windowed {

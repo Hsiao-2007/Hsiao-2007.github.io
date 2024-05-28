@@ -11,7 +11,7 @@
     font-family: terminal-font;
     src: url(JetbrainsMonoMedium-nRvBM.ttf);
 }
-p.windowed {
+pre.windowed {
     font-size: 50px;
     font-family: terminal-font;
     background-color: black;

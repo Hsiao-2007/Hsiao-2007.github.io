@@ -12,7 +12,7 @@
     src: url(JetbrainsMonoMedium-nRvBM.ttf);
 }
 pre.windowed {
-    font-size: 50px;
+    font-size: 30px;
     font-family: terminal-font;
     background-color: black;
     text-align: left;
@@ -25,7 +25,6 @@ pre.windowed {
 body {
     background-image: url('assets/wallpaper.png');
     background-size: 100%;
-    background-min-width: 1000px;
     background-repeat: no-repeat;
     background-color: #12171b; 
 }
@@ -39,4 +38,11 @@ img.windowed {
 div.main-page {
     min-width: 2200px;
     margin-top: 300px;
+}
+input.typing {
+    font-size: 30px;
+    font-family: terminal-font;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    border: 0 solid rgba(0,0,0,0);
 }

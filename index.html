@@ -9,14 +9,29 @@
 </head>
 <body>
     <div class="main-page">
-<pre class="windowed"><span style="color: blue;"> Hsiao-2007@github.com:~$</span> gitfetch
- Running gitfetch...
- Name: Hsiao-Shan Graham
- Coding languages: Bash, Java, C, C#, CSS, HTML, and Python
- Projects: N/A
- OSes: OpenSUSE Tumbleweed, Ubuntu, and (sadly) Windows 11
-<span style="color: blue;">
- Hsiao-2007@github.com:~$</span></pre>
+<pre class="windowed" id="terminal-text">
+<span style="color: red;"> Welcome to the github space terminal
+ type 'gitfetch' to read off the info</span>
+
+<span style="color: blue;"> Hsiao-2007@github.com:~$ </span><input type="text" class="typing" id="text_input" action="">
+</pre>
+<script id="text_input/js">
+    document.getElementById("text_input").addEventListener("keypress",  function(event) {
+        if (event.key === "Enter") {
+            const input_value = document.getElementById("text_input").value;
+            if (input_value === "gitfetch") {
+                const terminal = document.getElementById("terminal-text")
+                const newLine = document.createElement("span");
+                newLine.style = "color: blue";
+                newLine.value = " Hsiao-2007@github.com:~$ "
+                newLine.className = "windowed";
+                terminal.append(" Hello!\n");
+                terminal.appendChild(newLine);
+
+            }
+        }
+    });
+</script>
         <img class="windowed" src="assets/av0.png">
     </div>
 </body>

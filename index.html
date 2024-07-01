@@ -8,31 +8,24 @@
     <title>GitHub Space</title>
 </head>
 <body>
-    <div class="main-page">
-<pre class="windowed" id="terminal-text">
-<span style="color: red;"> Welcome to the github space terminal
- type 'gitfetch' to read off the info</span>
-
-<span style="color: blue;"> Hsiao-2007@github.com:~$ </span><input type="text" class="typing" id="text_input" action="">
-</pre>
-<script id="text_input/js">
-    document.getElementById("text_input").addEventListener("keypress",  function(event) {
-        if (event.key === "Enter") {
-            const input_value = document.getElementById("text_input").value;
-            if (input_value === "gitfetch") {
-                const terminal = document.getElementById("terminal-text")
-                const newLine = document.createElement("span");
-                newLine.style = "color: blue";
-                newLine.value = " Hsiao-2007@github.com:~$ "
-                newLine.className = "windowed";
-                terminal.append(" Hello!\n");
-                terminal.appendChild(newLine);
-
-            }
-        }
-    });
-</script>
-        <img class="windowed" src="assets/av0.png">
+    <script>
+        function updateTerminalText() {
+            var element = document.getElementById("terminal-text");
+            var text = document.getElementById("terminal-text").innerHTML;
+            var promptText = document.getElementById("input-command");
+            console.log(promptText.promptText);
+            element.innerHTML = text + "<br>This must work right?";
+        };
+    </script>
+    <!-- <div id="side-bar">
+        <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
+    </div> -->
+    <div id="terminal-screen">
+        <p id="terminal-text"><span id="prompt">guest@hsiao-2007.github.io</span>:<span id="working-dir">&Tilde;</span>&#62; <input id="input-command" type="text">
+        </p>
+    </div>
+    <button onclick="updateTerminalText()" type="button">Button</button>
+    <div id="contacts">
     </div>
 </body>
 </html>

@@ -1,48 +1,57 @@
-.windowed {
-    z-index: 2;
-    display: flexbox;
-    border: 1px solid white;
-    border-top-width: 25px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    text-align: center;
-}
+body {
+    background-image: url(assets/wallpaper.png);
+    background-size: cover;
+} 
+
 @font-face {
     font-family: terminal-font;
-    src: url(JetbrainsMonoMedium-nRvBM.ttf);
-}
-pre.windowed {
-    font-size: 30px;
-    font-family: terminal-font;
-    background-color: black;
-    text-align: left;
-    color: #33FF00;
-    margin-top: 200px;
-    margin-left: 900px;
-    margin-right: 100px;
+    src: url(assets/JetbrainsMonoMedium-nRvBM.ttf);
 }
 
-body {
-    background-image: url('assets/wallpaper.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: #12171b; 
-}
-
-img.windowed {
-    margin-left: 40px;
-    margin-top: -25%;
-    width: 30%;
-    height: 30%;
-}
-div.main-page {
-    min-width: 2200px;
-    margin-top: 300px;
-}
-input.typing {
-    font-size: 30px;
-    font-family: terminal-font;
+#terminal-screen {
     color: white;
-    background-color: rgba(0,0,0,0);
-    border: 0 solid rgba(0,0,0,0);
+    font-family: terminal-font;
+    font-size: large;
+    border-top: 15px solid white;
+    background-color: black;
+    padding-top: 0px;
+}
+#contacts {
+    color: grey;
+    background-color: black;
+    margin-top: 100px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+#avatar {
+    width: 20%;
+    height: auto;
+}
+
+#terminal-text {
+
+}
+
+img.hidden {
+    width: 0px;
+    height: 0px;
+}
+
+#prompt {
+    color: greenyellow;
+}
+
+#working-dir {
+    color: blue;
+}
+
+#input-command {
+    color: white;
+    font-family: terminal-font;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 solid;
+}
+#input-command {
+    border: 0 solid;
 }

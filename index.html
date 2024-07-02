@@ -9,13 +9,24 @@
 </head>
 <body>
     <script>
-        function updateTerminalText() {
+        function checkInput() {
             var element = document.getElementById("terminal-text");
             var text = document.getElementById("terminal-text").innerHTML;
             var promptText = document.getElementById("input-command");
-            console.log(promptText.promptText);
-            element.innerHTML = text + "<br>This must work right?";
-        };
+            if (promptText.value == "check") {
+                text = text.substring(0, 88);
+                element.innerHTML = text + promptText.value + "<br>This must work right?";
+            } else {
+                text = text.substring(0, 88);
+                for (var i = 0; i < text.length; i++) {
+                    if (promptText.value.substring(i,i+1) == " ") {
+                        var command = promptText.value.substring(0,i+1);
+                        break;
+                    }
+                }
+                element.innerHTML = text + promptText.value + "<br>bash: " + command + " command does not exist";
+            }
+        }
     </script>
     <!-- <div id="side-bar">
         <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
@@ -24,7 +35,7 @@
         <p id="terminal-text"><span id="prompt">guest@hsiao-2007.github.io</span>:<span id="working-dir">&Tilde;</span>&#62; <input id="input-command" type="text">
         </p>
     </div>
-    <button onclick="updateTerminalText()" type="button">Button</button>
+    <button type="submit" onclick="checkInput()">Submit command</button>
     <div id="contacts">
     </div>
 </body>

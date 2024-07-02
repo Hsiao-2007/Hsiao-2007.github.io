@@ -13,9 +13,9 @@
             var element = document.getElementById("terminal-text");
             var text = document.getElementById("terminal-text").innerHTML;
             var promptText = document.getElementById("input-command");
-            if (promptText.value == "check") {
+            if (promptText.value == "cat .info" || promptText.value == "cat ~/.info") {
                 text = text.substring(0, 88);
-                element.innerHTML = text + promptText.value + "<br>This must work right?";
+                element.innerHTML = text + "This must work right?<br>";
             } else {
                 text = text.substring(0, 88);
                 for (var i = 0; i < text.length; i++) {
@@ -24,18 +24,16 @@
                         break;
                     }
                 }
-                element.innerHTML = text + promptText.value + "<br>bash: " + command + " command does not exist";
+                element.innerHTML = text + "bash: " + command + " command does not exist<br>";
             }
         }
     </script>
-    <!-- <div id="side-bar">
-        <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
-    </div> -->
     <div id="terminal-screen">
-        <p id="terminal-text"><span id="prompt">guest@hsiao-2007.github.io</span>:<span id="working-dir">&Tilde;</span>&#62; <input id="input-command" type="text">
-        </p>
+        <span id="prompt">guest@hsiao-2007.github.io</span>:<span id="working-dir">&Tilde;</span>&#62; <input id="input-command" type="text"><button type="submit" onclick="checkInput()">Submit command</button>
+        <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
+        <p id="terminal-text"></p>
+
     </div>
-    <button type="submit" onclick="checkInput()">Submit command</button>
     <div id="contacts">
     </div>
 </body>

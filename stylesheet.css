@@ -26,6 +26,7 @@ body {
 #avatar {
     width: 20%;
     height: auto;
+    z-index: 0;
 }
 
 #terminal-text {

@@ -5,35 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="assets/av0.png" type="image/x-icon">
+    <script src="functions.js"></script>
     <title>GitHub Space</title>
 </head>
 <body>
-    <script>
-        function checkInput() {
-            var element = document.getElementById("terminal-text");
-            var text = document.getElementById("terminal-text").innerHTML;
-            var promptText = document.getElementById("input-command");
-            if (promptText.value == "cat .info" || promptText.value == "cat ~/.info") {
-                text = text.substring(0, 88);
-                element.innerHTML = text + "Hi, my name is Hsiao-Shan Graham<br>This is my in progress github space, that I hope to add a working bash terminal to in order to give an authentic bash terminal experince<br>I am learning some langauges as of now, but am hoping to start learning QT in a little while.<br>I use Arch and openSuse linux, but also windows or debian based distros if need be.<br>";
-            } else {
-                text = text.substring(0, 88);
-                for (var i = 0; i < text.length; i++) {
-                    if (promptText.value.substring(i,i+1) == " ") {
-                        var command = promptText.value.substring(0,i+1);
-                        break;
-                    }
-                }
-                element.innerHTML = text + "bash: " + command + " command does not exist<br>";
-            }
-        }
-    </script>
     <div id="terminal-screen">
         <span id="prompt">guest@hsiao-2007.github.io</span>:<span id="working-dir">&Tilde;</span>&#62; <input id="input-command" type="text"><button type="submit" onclick="checkInput()">Submit command</button>
-        <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
         <p id="terminal-text"></p>
-
     </div>
+    <img src="assets/av0.png" alt="Avatar of Synthwave image" id="avatar" class="hidden">
     <div id="contacts">
     </div>
 </body>

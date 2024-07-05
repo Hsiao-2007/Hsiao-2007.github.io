@@ -2,7 +2,16 @@ body {
     background-image: url(assets/wallpaper.png);
     background-size: cover;
 } 
-
+#main-page {
+    display: flex;
+    border: 1px solid white;
+    height: auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @font-face {
     font-family: terminal-font;
     src: url(assets/JetbrainsMonoMedium-nRvBM.ttf);
@@ -33,9 +42,8 @@ body {
 
 }
 
-img.hidden {
-    width: 0px;
-    height: 0px;
+.hidden {
+    display: none;
 }
 
 #prompt {
